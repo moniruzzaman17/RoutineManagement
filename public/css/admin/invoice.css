@@ -1,0 +1,8 @@
+
+.invoice{
+  padding: 30px;
+}
+.invoice-logo{
+  width: 90px;
+}
+@page{size:landscape!important;}
