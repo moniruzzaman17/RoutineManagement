@@ -2398,6 +2398,10 @@
                 "optimize",
                 "page speed"
             ],
+            "support": {
+                "issues": "https://github.com/renatomarinho/laravel-page-speed/issues",
+                "source": "https://github.com/renatomarinho/laravel-page-speed/tree/2.0.0"
+            },
             "time": "2021-01-15T21:21:00+00:00"
         },
         {
@@ -7155,5 +7159,5 @@
         "php": "^7.2.5|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

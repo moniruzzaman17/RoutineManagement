@@ -5,14 +5,17 @@
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="_base_url" content="{{ url('/') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-{{--     <meta name="keywords" content="Shuddhoraj, Grocery, Cooking Needs, shuddhoraj, শুদ্ধরাজ, grocery, shop, formalin free shop, Fresh  grocery, shuddhoraj buy, large home delivery, store, shuddho, home bd sell, online bazaar, clicxo, online grocery shopping, shop, shop, shop, bazaar,shuddhoraj, best online Chal, vegetables, vegetable bazaar, 01950400100, Oil, free, bangladesh Free daily return,grocery price dhaka, bangladesh online grocery, bangladesh bazaar, best bazaar, daily bazaar, daily shop, online shop, shuddhoraj home shop, Meat, Oil, Chal, core internet technologies, clicxo, Free home delivery, Fresh vegetables, formalin free, shuddhoraj, online grocery shopping, clicxo" /> --}}
+    <meta name="viewport" content="width=1188" />
+    <meta name="keywords" content="Collectorate" />
 
     <link href='/img/{{$favicon}}' rel='shortcut icon' type='image/x-icon' />
     <link href='{{ asset("img/".$logo) }}' rel='apple-touch-icon-precomposed'/>
     <link href='{{ asset("img/".$logo) }}' sizes='114x114' rel='apple-touch-icon-precomposed'/>
     <link href='{{ asset("img/".$logo) }}' sizes='72x72' rel='apple-touch-icon-precomposed'/>
     <link href='{{ asset("img/".$logo) }}' sizes='144x144' rel='apple-touch-icon-precomposed'/>
+    <meta property="og:title" content="CPSCN Routine System" />
+    <meta property="og:description" content="Collectorate Public School & College, Nilphamari" />
+    <meta property="og:image" content="/img/{{$og_banner}}" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.min.css') }}" type="text/css">
@@ -48,17 +51,17 @@
     <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
     
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        @if(session()->has('success'))
-            <script>swal("Thank you!", "{{session()->get('success')}}", "success")</script>
-        @endif
-        @if(session()->has('failed'))
-            <script>swal("Failed!", "{{session()->get('failed')}}", "error")</script>
-        @endif
-        @if(session()->has('logout'))
-            <script>swal("Logged Out!", "{{session()->get('logout')}}", "success")</script>
-        @endif
-        @if ($errors->any())
-            <script>swal("Failed!", "@foreach($errors->all() as $message)\n {{$message}}\n @endforeach", "error")</script>
-        @endif
+    @if(session()->has('success'))
+    <script>swal("Thank you!", "{{session()->get('success')}}", "success")</script>
+    @endif
+    @if(session()->has('failed'))
+    <script>swal("Failed!", "{{session()->get('failed')}}", "error")</script>
+    @endif
+    @if(session()->has('logout'))
+    <script>swal("Logged Out!", "{{session()->get('logout')}}", "success")</script>
+    @endif
+    @if ($errors->any())
+    <script>swal("Failed!", "@foreach($errors->all() as $message)\n {{$message}}\n @endforeach", "error")</script>
+    @endif
 </body>
 </html>

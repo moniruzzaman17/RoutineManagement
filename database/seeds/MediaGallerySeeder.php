@@ -15,43 +15,57 @@ class MediaGallerySeeder extends Seeder
     	$names       = [
     		"logo",
     		"admin_logo",
-    		"favicon"
+    		"favicon",
+            "header_banner",
+            "og_banner"
     	];
 
     	$values      = [
     		"logo.png",
     		"admin_logo.png",
-    		"favicon.png"
+    		"favicon.png",
+            "header.png",
+            "og-image.png"
     	];
 
     	$mob_values  = [
     		"",
     		"",
-    		""
+    		"",
+            "",
+            ""
     	];
 
     	$urls  = [
     		"",
     		"",
-    		""
+    		"",
+            "",
+            ""
     	];
 
     	$media_types = [
     		"logo",
     		"logo",
-    		"favicon"
+    		"favicon",
+            "banner",
+            "banner"
     	];
 
     	$positions  = [
     		"",
     		"",
-    		""
+    		"",
+            "",
+            ""
     	];
 
     	$visibilities  = [
     		"1",
     		"1",
-    		"1"
+    		"1",
+            "1",
+            "1"
     	];
 
     	for ($item=0; $item < count($names); $item++) {

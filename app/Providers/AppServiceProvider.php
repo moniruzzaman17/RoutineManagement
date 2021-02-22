@@ -34,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
         $view->with('adminLogo', MediaGallery::select('value')->where('name','admin_logo')->first()->value);
 
         $view->with('favicon', MediaGallery::select('value')->where('name','favicon')->first()->value);
+        $view->with('header_banner', MediaGallery::select('value')->where('name','header_banner')->first()->value);
+        $view->with('og_banner', MediaGallery::select('value')->where('name','og_banner')->first()->value);
     });
   }
 }
