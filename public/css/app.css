@@ -10944,8 +10944,41 @@ a.text-dark:focus {
   }
 }
 
+.action-button {
+  text-transform: uppercase;
+  background: #467592;
+  padding: 10px 13px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: 7px 8px;
+  text-decoration: none;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  color: white;
+  background: #658CA5;
+}
+
+.required:after {
+  content: "*";
+  color: #e02b27;
+  font-size: 1rem !important;
+  margin: 0 0 0 5px !important;
+}
+
 .home-body {
   background: #F7F9FA;
   padding: 20px;
+}
+
+.home-body .student-search-wrapper {
+  width: 40%;
+}
+
+.home-body .teacher-search-wrapper {
+  width: 40%;
 }
 

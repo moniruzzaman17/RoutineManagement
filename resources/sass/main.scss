@@ -1,0 +1,24 @@
+.action-button{
+	text-transform: uppercase;
+	background: $primary-color;
+	padding: 10px 13px;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	padding: 7px 8px;
+	text-decoration: none;
+	transition: .1s;
+	cursor: pointer;
+	&:hover{
+		color: white;
+		background: $secondary-color;
+	}
+}
+.required{
+	&:after{
+		content:"*";
+		color: #e02b27;
+		font-size: 1rem!important;
+		margin: 0 0 0 5px!important;
+	}
+}
