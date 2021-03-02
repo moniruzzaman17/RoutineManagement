@@ -2,6 +2,12 @@ $(document).ready(function() {
   $(window).on('load', function () {
       // $(".loading").fadeOut("fast");       
    // $('#newsletterPopup').modal('show');
+   if ($('#email').val() != '') {
+    $('#email').addClass('oldEmailActive');
+   }
+   else{
+    $('#email').removeClass('oldEmailActive');
+   }
 
  });
 
@@ -20,4 +26,21 @@ $(document).ready(function() {
       $('.teacher-search-wrapper').hide();
     }
   });
+
+
+  $('input').focus(function(){
+    $(this).parents('.form-group').addClass('focused');
+    $('#email').removeClass('oldEmailActive');
+  });
+
+  $('input').blur(function(){
+    var inputValue = $(this).val();
+    if ( inputValue == "" ) {
+      $(this).removeClass('filled');
+      $(this).parents('.form-group').removeClass('focused');  
+    } else {
+      $(this).addClass('filled');
+    }
+  });
+
 });

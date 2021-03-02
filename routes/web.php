@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +16,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Auth::routes();
 
+Route::get('/', 'layouts\AppController@index')->name('home');
 
-Route::get('/', 'layouts\appController@index')->name('home');
+Route::group(['prefix' => 'cpscn-admin'], function () {
+	// Route::get('/login', 'layouts\AppController@abort404')->name('abort404');
+	Auth::routes();
+	Route::get('/', 'layouts\AppController@adminIndex')->name('admin.login')->middleware('authLoginToAdminHome');
+	Route::group( ['middleware' => 'auth' ], function() {
+		Route::get('/dashboard/key/{session_id}', 'admin\DashboardController@index')->name('admin.home');
+	});
+});

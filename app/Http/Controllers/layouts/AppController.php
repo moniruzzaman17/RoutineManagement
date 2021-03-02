@@ -18,6 +18,14 @@ class AppController extends Controller
     }
 
     public function index(){
-    	return view('welcome');
+    	return view('home');
+    }
+
+    public function adminIndex(){
+        return view('welcome');
+    }
+
+    public function abort404(){
+        return abort(404);
     }
 }

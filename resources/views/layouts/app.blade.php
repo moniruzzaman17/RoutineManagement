@@ -31,7 +31,10 @@
 <body class="@yield('body-class')">
     {{-- <div class="loading">Loading&#8230;</div> --}}
     {{-- include header --}}
-    {{-- @include('includes.header') --}}
+    @include('includes.header')
+    @auth('web')
+    @include('includes.navHeader')
+    @endauth 
     {{-- loading page content --}}
     @yield('content')
     {{-- end of page content --}}

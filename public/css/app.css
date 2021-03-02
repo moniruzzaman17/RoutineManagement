@@ -10982,3 +10982,87 @@ a.text-dark:focus {
   width: 40%;
 }
 
+.login-wrapper .login-body {
+  width: 40%;
+  padding: 20px;
+}
+
+.login-wrapper .login-body .form-group {
+  padding: 10px;
+  position: relative;
+  padding-bottom: 25px !important;
+}
+
+.login-wrapper .login-body .form-group + .form-group {
+  margin-top: 30px;
+}
+
+.login-wrapper .login-body .form-group + .form-group textarea {
+  height: 132px;
+  min-height: 132px;
+  max-height: 200px;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.login-wrapper .login-body .form-group .input-number {
+  margin-right: 0;
+}
+
+.login-wrapper .login-body .form-label {
+  font-size: 16px;
+  position: absolute;
+  left: 11px;
+  top: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  background: transparent;
+  z-index: 9;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+
+.login-wrapper .login-body .focused .form-label {
+  transform: translateY(-90%);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.login-wrapper .login-body .focused .input-number .number-prep {
+  margin-right: 10px;
+  box-shadow: 0 2px 0 0 lightgreen;
+}
+
+.login-wrapper .login-body .form-input {
+  position: relative;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 150ms ease-out;
+  background: transparent;
+}
+
+.login-wrapper .login-body .form-input:focus {
+  box-shadow: 0 1px 0 0 gray;
+  background: transparent;
+}
+
+.login-wrapper .login-body .form-input.filled {
+  box-shadow: 0 2px 0 0 lightgreen;
+}
+
+.login-wrapper .login-body .input-number {
+  display: flex;
+}
+
+.login-wrapper .login-body .input-number .number-prep {
+  width: 10% !important;
+}
+
+.login-wrapper .login-body .oldEmailActive {
+  padding-left: 68px;
+  padding-top: 6px;
+}
+

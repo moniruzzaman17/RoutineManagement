@@ -1,7 +1,6 @@
 @extends('layouts.app')
-@section('title', __('OneStylife | Onlie Shopping |'))
-@section('body-class', 'one-home')
+@section('title', __('cpscn Routine Management | Collectorate Public School & College, Nilphamari'))
+@section('body-class', 'cpscn-admin-home')
 @section('content')
-@include('includes.header')
-@include('home')
+@include('auth.login')
 @endsection

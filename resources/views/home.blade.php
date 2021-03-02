@@ -1,3 +1,7 @@
+@extends('layouts.app')
+@section('title', __('Collectorate Public School & College, Nilphamari'))
+@section('body-class', 'cpscn-home')
+@section('content')
 <div class="container">
 	<div class="home-body m-auto">
 		<h4 class="text-center">Welcome to CPSCN Routine System</h4>
@@ -79,3 +83,4 @@
 		</div>
 	</div>
 </div>
+@endsection
