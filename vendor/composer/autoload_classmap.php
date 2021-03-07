@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\ClassInfo' => $baseDir . '/app/ClassInfo.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -19,9 +20,12 @@ return array(
     'App\\Http\\Controllers\\admin\\DashboardController' => $baseDir . '/app/Http/Controllers/admin/DashboardController.php',
     'App\\Http\\Controllers\\admin\\classes\\classesController' => $baseDir . '/app/Http/Controllers/admin/classes/classesController.php',
     'App\\Http\\Controllers\\admin\\group\\GroupController' => $baseDir . '/app/Http/Controllers/admin/group/GroupController.php',
+    'App\\Http\\Controllers\\admin\\period\\PeriodController' => $baseDir . '/app/Http/Controllers/admin/period/PeriodController.php',
     'App\\Http\\Controllers\\admin\\profile\\ProfileController' => $baseDir . '/app/Http/Controllers/admin/profile/ProfileController.php',
+    'App\\Http\\Controllers\\admin\\room\\RoomController' => $baseDir . '/app/Http/Controllers/admin/room/RoomController.php',
     'App\\Http\\Controllers\\admin\\section\\SectionController' => $baseDir . '/app/Http/Controllers/admin/section/SectionController.php',
     'App\\Http\\Controllers\\admin\\shift\\ShiftController' => $baseDir . '/app/Http/Controllers/admin/shift/ShiftController.php',
+    'App\\Http\\Controllers\\admin\\subject\\SubjectController' => $baseDir . '/app/Http/Controllers/admin/subject/SubjectController.php',
     'App\\Http\\Controllers\\admin\\teacher\\TeacherController' => $baseDir . '/app/Http/Controllers/admin/teacher/TeacherController.php',
     'App\\Http\\Controllers\\layouts\\AppController' => $baseDir . '/app/Http/Controllers/layouts/AppController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -133,6 +137,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'ClassInfoSeeder' => $baseDir . '/database/seeds/ClassInfoSeeder.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
@@ -3685,6 +3690,7 @@ return array(
     'SebastianBergmann\\Type\\UnknownType' => $vendorDir . '/sebastian/type/src/UnknownType.php',
     'SebastianBergmann\\Type\\VoidType' => $vendorDir . '/sebastian/type/src/VoidType.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
+    'ShiftSeeder' => $baseDir . '/database/seeds/ShiftSeeder.php',
     'Stringable' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
     'Symfony\\Component\\Console\\Application' => $vendorDir . '/symfony/console/Application.php',
     'Symfony\\Component\\Console\\Color' => $vendorDir . '/symfony/console/Color.php',

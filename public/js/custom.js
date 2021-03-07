@@ -4,12 +4,12 @@ $(document).ready(function() {
    // $('#newsletterPopup').modal('show');
    if ($('#email').val() != '') {
     $('#email').addClass('oldEmailActive');
-   }
-   else{
+  }
+  else{
     $('#email').removeClass('oldEmailActive');
-   }
+  }
 
- });
+});
 
 
   $('#searchIdentity').change(function(event){
@@ -42,5 +42,4 @@ $(document).ready(function() {
       $(this).addClass('filled');
     }
   });
-
 });

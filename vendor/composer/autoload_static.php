@@ -506,6 +506,7 @@ class ComposerStaticInita7e947aa1ec26bec1673a4d2f3ddee06
     );
 
     public static $classMap = array (
+        'App\\ClassInfo' => __DIR__ . '/../..' . '/app/ClassInfo.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -519,9 +520,12 @@ class ComposerStaticInita7e947aa1ec26bec1673a4d2f3ddee06
         'App\\Http\\Controllers\\admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/DashboardController.php',
         'App\\Http\\Controllers\\admin\\classes\\classesController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/classes/classesController.php',
         'App\\Http\\Controllers\\admin\\group\\GroupController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/group/GroupController.php',
+        'App\\Http\\Controllers\\admin\\period\\PeriodController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/period/PeriodController.php',
         'App\\Http\\Controllers\\admin\\profile\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/profile/ProfileController.php',
+        'App\\Http\\Controllers\\admin\\room\\RoomController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/room/RoomController.php',
         'App\\Http\\Controllers\\admin\\section\\SectionController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/section/SectionController.php',
         'App\\Http\\Controllers\\admin\\shift\\ShiftController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/shift/ShiftController.php',
+        'App\\Http\\Controllers\\admin\\subject\\SubjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/subject/SubjectController.php',
         'App\\Http\\Controllers\\admin\\teacher\\TeacherController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/teacher/TeacherController.php',
         'App\\Http\\Controllers\\layouts\\AppController' => __DIR__ . '/../..' . '/app/Http/Controllers/layouts/AppController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -633,6 +637,7 @@ class ComposerStaticInita7e947aa1ec26bec1673a4d2f3ddee06
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'ClassInfoSeeder' => __DIR__ . '/../..' . '/database/seeds/ClassInfoSeeder.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
@@ -4185,6 +4190,7 @@ class ComposerStaticInita7e947aa1ec26bec1673a4d2f3ddee06
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'ShiftSeeder' => __DIR__ . '/../..' . '/database/seeds/ShiftSeeder.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Color' => __DIR__ . '/..' . '/symfony/console/Color.php',

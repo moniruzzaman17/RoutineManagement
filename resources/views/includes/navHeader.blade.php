@@ -14,8 +14,8 @@
 						Add
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="{{route('shift',session()->getId())}}">Shif</a>
 						<a class="dropdown-item" href="{{route('class',session()->getId())}}">Class</a>
+						<a class="dropdown-item" href="{{route('shift',session()->getId())}}">Shift</a>
 						<a class="dropdown-item" href="{{route('group',session()->getId())}}">Group</a>
 						<a class="dropdown-item" href="{{route('section',session()->getId())}}">Section</a>
 						<a class="dropdown-item" href="{{route('subject',session()->getId())}}">Subject</a>

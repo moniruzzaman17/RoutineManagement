@@ -11066,3 +11066,8 @@ a.text-dark:focus {
   padding-top: 6px;
 }
 
+.shift-body-wrapper .shift-body .table-head {
+  background: #467592;
+  color: white;
+}
+

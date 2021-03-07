@@ -18,14 +18,6 @@
 		<div class="student-search-wrapper m-auto" style="display: none;">
 			<form action="" method="post">
 				<div class="form-group">
-					<label for="shift" class="required">Shift</label>
-					<select class="form-control" id="shift">
-						<option readonly required>Select Shift</option>
-						<option>Morning</option>
-						<option>Day</option>
-					</select>
-				</div>
-				<div class="form-group">
 					<label for="class" class="required">Class</label>
 					<select class="form-control" id="class">
 						<option readonly required>Select Class</option>
@@ -41,6 +33,14 @@
 						<option>Class X</option>
 						<option>Class XI</option>
 						<option>Class XI</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="shift" class="required">Shift</label>
+					<select class="form-control" id="shift">
+						<option readonly required>Select Shift</option>
+						<option>Morning</option>
+						<option>Day</option>
 					</select>
 				</div>
 				<div class="form-group">
