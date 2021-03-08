@@ -37,10 +37,24 @@ Route::group(['prefix' => 'cpscn-admin'], function () {
 
 
 		Route::get('group/key/{session_id}', 'admin\group\GroupController@index')->name('group');
+		Route::post('group/key/{session_id}', 'admin\group\GroupController@addGroup')->name('group');
+		Route::post('group/update/key/{session_id}', 'admin\group\GroupController@update')->name('group.update');
+
+
 		Route::get('section/key/{session_id}', 'admin\section\SectionController@index')->name('section');
+		Route::post('section/key/{session_id}', 'admin\section\SectionController@addSection')->name('section');
+		Route::post('section/update/key/{session_id}', 'admin\section\SectionController@update')->name('section.update');
+
 		Route::get('subject/key/{session_id}', 'admin\subject\SubjectController@index')->name('subject');
+		Route::post('subject/key/{session_id}', 'admin\subject\SubjectController@addSubject')->name('subject');
+		Route::post('subject/update/key/{session_id}', 'admin\subject\SubjectController@update')->name('subject.update');
+
 		Route::get('period/key/{session_id}', 'admin\period\PeriodController@index')->name('period');
+
 		Route::get('room/key/{session_id}', 'admin\room\RoomController@index')->name('room');
+		Route::post('room/key/{session_id}', 'admin\room\RoomController@addRoom')->name('room');
+		Route::post('room/update/key/{session_id}', 'admin\room\RoomController@update')->name('room.update');
+
 		Route::get('teacher/key/{session_id}', 'admin\teacher\TeacherController@index')->name('teacher');
 	});
 });
@@ -48,3 +62,7 @@ Route::group(['prefix' => 'cpscn-admin'], function () {
 // ajax routes
 Route::post('/shift/remove', 'admin\shift\ShiftController@remove')->name('shift.remove');
 Route::post('/class/remove', 'admin\classes\ClassesController@remove')->name('class.remove');
+Route::post('/group/remove', 'admin\group\GroupController@remove')->name('group.remove');
+Route::post('/section/remove', 'admin\section\SectionController@remove')->name('section.remove');
+Route::post('/subject/remove', 'admin\subject\SubjectController@remove')->name('subject.remove');
+Route::post('/room/remove', 'admin\room\RoomController@remove')->name('room.remove');

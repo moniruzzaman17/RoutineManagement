@@ -11071,3 +11071,8 @@ a.text-dark:focus {
   color: white;
 }
 
+.class-body-wrapper .class-body .table-head {
+  background: #467592;
+  color: white;
+}
+
