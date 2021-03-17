@@ -94,6 +94,27 @@ $(document).on('click','.removeSection',function(e){
 	}
 });
 
+// show class wise section
+$(document).on('change', '#classWiseSection', function() {
+		var classId = $(this).val();
+		var _token   = $('meta[name="csrf-token"]').attr('content');
+
+		$.ajax({
+			url: "/classwise/section",
+			type:"POST",
+			data:{
+				classId:classId,
+				_token: _token
+			},
+			
+			success:function(data){
+				$(".defaultSection").hide();
+				$(".section-table").html(data);
+			},
+		});
+});
+// end of section
+
 // Section ajax
 $(document).on('click','.removeSubject',function(e){
 	e.preventDefault();
@@ -135,6 +156,75 @@ $(document).on('click','.removeRoom',function(e){
 			success:function(data){
 				$(".defaultRoom").hide();
 				$(".room-table").html(data);
+			},
+		});
+	}
+});
+
+// Period Remove ajax
+$(document).on('click','.removePeriod',function(e){
+	e.preventDefault();
+	if (confirm('Are you sure you want to delete Selected Period?')) {
+		var periodId = $(this).attr('href');
+		var _token   = $('meta[name="csrf-token"]').attr('content');
+
+		$.ajax({
+			url: "/period/remove",
+			type:"POST",
+			data:{
+				periodId:periodId,
+				_token: _token
+			},
+			
+			success:function(data){
+				$(".defaultPeriod").hide();
+				$(".period-table").html(data);
+			},
+		});
+	}
+});
+
+// Period Remove ajax
+$(document).on('click','.removeTeacher',function(e){
+	e.preventDefault();
+	if (confirm('Are you sure you want to delete Selected Teacher Info?')) {
+		var teacherId = $(this).attr('href');
+		var _token   = $('meta[name="csrf-token"]').attr('content');
+
+		$.ajax({
+			url: "/teacher/remove",
+			type:"POST",
+			data:{
+				teacherId:teacherId,
+				_token: _token
+			},
+			
+			success:function(data){
+				$(".defaultTeacher").hide();
+				$(".teacher-table").html(data);
+			},
+		});
+	}
+});
+
+// Admin Remove ajax
+$(document).on('click','.removeAdmin',function(e){
+	e.preventDefault();
+	if (confirm('Are you sure you want to delete this admin?')) {
+		var adminId = $(this).attr('href');
+		var _token   = $('meta[name="csrf-token"]').attr('content');
+
+		$.ajax({
+			url: "/admin/remove",
+			type:"POST",
+			data:{
+				adminId:adminId,
+				_token: _token
+			},
+			
+			success:function(data){
+				$(".defaultAdmin").hide();
+				$(".admin-table").html(data);
 			},
 		});
 	}

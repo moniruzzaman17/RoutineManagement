@@ -12,7 +12,7 @@ class GroupSeeder extends Seeder
      */
     public function run()
     {
-    	$groups = ['Science','Arts','Commerce'];
+    	$groups = ['General','Science','Arts','Commerce'];
     	foreach ($groups as $key => $group) {
     		Group::create([
     			'group_name'=>$group,

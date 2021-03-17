@@ -19,6 +19,11 @@ class CreateSectionsTable extends Migration
             $table->string('section_name', 225)
             ->nullable()
             ->comment = 'Section Name';
+
+            $table->integer('class_id')->unsigned()->nullable(false)
+            ->comment = 'Class ID from Class';
+
+            $table->foreign('class_id')->references('entity_id')->on('class_infos')->onDelete('cascade');
         });
     }
 

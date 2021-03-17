@@ -88,4 +88,15 @@ class SubjectController extends Controller
             return view('admin.subject.ajaxSubjectTable',compact('subjects'))->with('success','Item has been removed');
         }
     }
+
+    /**
+     * Assign subject to Group.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function assignToGroup(Request $request)
+    {
+        $subjects = Subject::orderBy('entity_id', 'asc')->get();
+        return view('admin.subject.assign.assignSubjectToGroup', compact('subjects'));
+    }
 }

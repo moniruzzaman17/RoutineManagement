@@ -42,4 +42,8 @@ $(document).ready(function() {
       $(this).addClass('filled');
     }
   });
+
+  // $('#startTime').pickatime({
+  //   twelvehour: true,
+  // });
 });

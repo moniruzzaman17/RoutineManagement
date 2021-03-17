@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             GroupSeeder::class,
             ShiftSeeder::class,
-            SectionSeeder::class,
+            // SectionSeeder::class,
             ClassRoomSeeder::class,
             ClassInfoSeeder::class,
             MediaGallerySeeder::class,

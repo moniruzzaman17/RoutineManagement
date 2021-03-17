@@ -4,15 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Shift extends Model
+class Teacher extends Model
 {
     protected $primaryKey = 'entity_id';
     public $timestamps = false;
     protected $fillable = [
-         'shift_name',
+         'teacher_name',
+         'name_code',
+         'designation',
+         'contact_number',
     ];
-
-    public function periods() {
-        return $this->hasMany('App\periods','shift_id','entity_id');
-    }
 }

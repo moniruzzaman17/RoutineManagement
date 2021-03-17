@@ -32,9 +32,11 @@
     {{-- <div class="loading">Loading&#8230;</div> --}}
     {{-- include header --}}
     @include('includes.header')
+    @if (Route::currentRouteName() != 'home')
     @auth('web')
     @include('includes.navHeader')
     @endauth 
+    @endif
     {{-- loading page content --}}
     @yield('content')
     {{-- end of page content --}}

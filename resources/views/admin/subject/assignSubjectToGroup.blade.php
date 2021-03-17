@@ -1,22 +1,4 @@
-{{-- @if(session()->has('success'))
-<div class="alert alert-success" role="alert">
-	<i class="fa fa-check" aria-hidden="true"></i> {{ session()->get('success') }}
-</div>
-@endif
-@if(session()->has('error'))
-<div class="alert alert-danger" role="alert">
-	<i class="fa fa-times" aria-hidden="true"></i> {{ session()->get('error') }}
-</div>
-@endif
-@if ($errors->any())
-<div class="alert alert-danger">
-	<ul>
-		@foreach ($errors->all() as $message)
-		<li>{{ $message }}</li>
-		@endforeach
-	</ul>
-</div>
-@endif --}}
+
 <table class="table table-striped">
 	<thead>
 		<tr class="table-head">

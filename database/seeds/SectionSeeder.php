@@ -11,11 +11,11 @@ class SectionSeeder extends Seeder
      */
     public function run()
     {
-    	$sections = ['A','B','C','D','E','F','G','H','I'];
-    	foreach ($sections as $key => $section) {
-    		Section::create([
-    			'section_name'=>$section,
-    		]);
-    	}
+    	// $sections = ['A','B','C','D','E','F','G','H','I'];
+    	// foreach ($sections as $key => $section) {
+    	// 	Section::create([
+    	// 		'section_name'=>$section,
+    	// 	]);
+    	// }
     }
 }

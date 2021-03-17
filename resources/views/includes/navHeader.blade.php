@@ -16,9 +16,10 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="{{route('class',session()->getId())}}">Class</a>
 						<a class="dropdown-item" href="{{route('shift',session()->getId())}}">Shift</a>
-						<a class="dropdown-item" href="{{route('group',session()->getId())}}">Group</a>
 						<a class="dropdown-item" href="{{route('section',session()->getId())}}">Section</a>
+						<a class="dropdown-item" href="{{route('group',session()->getId())}}">Group</a>
 						<a class="dropdown-item" href="{{route('subject',session()->getId())}}">Subject</a>
+						<a class="dropdown-item" href="{{route('subject.assignto.group',session()->getId())}}">Assign Subject to Group</a>
 						<a class="dropdown-item" href="{{route('room',session()->getId())}}">Class Room</a>
 						<a class="dropdown-item" href="{{route('period',session()->getId())}}">Period Info</a>
 						<a class="dropdown-item" href="{{route('teacher',session()->getId())}}">Teacher</a>
@@ -31,7 +32,7 @@
 				</li>
 				@auth('web')
 				<li class="nav-item">
-					<a class="nav-link" href="{{route('profile',session()->getId())}}">Admin Profile</a>
+					<a class="nav-link" href="{{route('profile',session()->getId())}}">{{ Auth::guard('web')->user()->name }}'s Profile</a>
 				</li>
 				<li class="nav-item" style="float: right;">
 					<a href="" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
