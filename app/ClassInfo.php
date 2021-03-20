@@ -16,4 +16,7 @@ class ClassInfo extends Model
     public function sections() {
         return $this->hasMany('App\Section','class_id','entity_id');
     }
+    public function classGroup() {
+        return $this->hasMany('App\ClassGroup','class_id','entity_id');
+    }
 }

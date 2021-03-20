@@ -506,6 +506,7 @@ class ComposerStaticInita7e947aa1ec26bec1673a4d2f3ddee06
     );
 
     public static $classMap = array (
+        'App\\ClassGroup' => __DIR__ . '/../..' . '/app/ClassGroup.php',
         'App\\ClassInfo' => __DIR__ . '/../..' . '/app/ClassInfo.php',
         'App\\ClassRoom' => __DIR__ . '/../..' . '/app/ClassRoom.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -520,6 +521,7 @@ class ComposerStaticInita7e947aa1ec26bec1673a4d2f3ddee06
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/DashboardController.php',
+        'App\\Http\\Controllers\\admin\\assign\\GroupToClassController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/assign/GroupToClassController.php',
         'App\\Http\\Controllers\\admin\\classes\\classesController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/classes/classesController.php',
         'App\\Http\\Controllers\\admin\\group\\GroupController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/group/GroupController.php',
         'App\\Http\\Controllers\\admin\\period\\PeriodController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/period/PeriodController.php',

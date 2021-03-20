@@ -64,6 +64,11 @@ Route::group(['prefix' => 'cpscn-admin'], function () {
 		Route::get('teacher/key/{session_id}', 'admin\teacher\TeacherController@index')->name('teacher');
 		Route::post('teacher/key/{session_id}', 'admin\teacher\TeacherController@addTeacher')->name('teacher');
 		Route::post('teacher/update/key/{session_id}', 'admin\teacher\TeacherController@update')->name('teacher.update');
+
+		// Assign route
+		Route::get('assign/group/to/class/key/{session_id}', 'admin\assign\GroupToClassController@index')->name('assign.group.class');
+		Route::post('assign/group/to/class/key/{session_id}', 'admin\assign\GroupToClassController@assignGroupToClass')->name('assign.group.class');
+		Route::post('assign/group/to/class/update/key/{session_id}', 'admin\assign\GroupToClassController@update')->name('assign.group.class.update');
 	});
 });
 
@@ -80,3 +85,6 @@ Route::post('/room/remove', 'admin\room\RoomController@remove')->name('room.remo
 Route::post('/period/remove', 'admin\period\PeriodController@remove')->name('period.remove');
 Route::post('/teacher/remove', 'admin\teacher\TeacherController@remove')->name('teacher.remove');
 Route::post('/admin/remove', 'admin\profile\ProfileController@remove')->name('profile.remove');
+
+Route::post('/assigngrouptoclass/remove', 'admin\assign\GroupToClassController@remove')->name('assigngrouptoclass.remove');
+Route::post('/dependentGroupforClass', 'admin\assign\GroupToClassController@dependentGroup')->name('assigngrouptoclass.dependent.group');

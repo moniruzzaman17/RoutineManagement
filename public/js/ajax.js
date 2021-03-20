@@ -229,3 +229,48 @@ $(document).on('click','.removeAdmin',function(e){
 		});
 	}
 });
+
+// Assign group to clss remove ajax
+$(document).on('click','.removeGrouptoclass',function(e){
+	e.preventDefault();
+	if (confirm('Are you sure you want to delete this?')) {
+		var assigngrouptoclassId = $(this).attr('href');
+		var _token   = $('meta[name="csrf-token"]').attr('content');
+
+		$.ajax({
+			url: "/assigngrouptoclass/remove",
+			type:"POST",
+			data:{
+				assigngrouptoclassId:assigngrouptoclassId,
+				_token: _token
+			},
+			
+			success:function(data){
+				$(".defaultGrouptoclass").hide();
+				$(".grouptoclass-table").html(data);
+			},
+		});
+	}
+});
+
+// dependent group in Assign group to clss
+$(document).on('change','#dependentGroup',function(e){
+	e.preventDefault();
+		var selectedClassId = $(this).val();
+		var _token   = $('meta[name="csrf-token"]').attr('content');
+		console.log(selectedClassId);
+
+		$.ajax({
+			url: "/dependentGroupforClass",
+			type:"POST",
+			data:{
+				selectedClassId:selectedClassId,
+				_token: _token
+			},
+			
+			success:function(data){
+				// $(".dependentGroup").hide();
+				$(".dependentGroup").html(data);
+			},
+		});
+});

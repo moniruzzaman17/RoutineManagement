@@ -11,4 +11,7 @@ class Group extends Model
     protected $fillable = [
          'group_name',
     ];
+    public function classGroup() {
+        return $this->hasMany('App\ClassGroup','group_id','entity_id');
+    }
 }

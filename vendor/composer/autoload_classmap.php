@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\ClassGroup' => $baseDir . '/app/ClassGroup.php',
     'App\\ClassInfo' => $baseDir . '/app/ClassInfo.php',
     'App\\ClassRoom' => $baseDir . '/app/ClassRoom.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -20,6 +21,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\admin\\DashboardController' => $baseDir . '/app/Http/Controllers/admin/DashboardController.php',
+    'App\\Http\\Controllers\\admin\\assign\\GroupToClassController' => $baseDir . '/app/Http/Controllers/admin/assign/GroupToClassController.php',
     'App\\Http\\Controllers\\admin\\classes\\classesController' => $baseDir . '/app/Http/Controllers/admin/classes/classesController.php',
     'App\\Http\\Controllers\\admin\\group\\GroupController' => $baseDir . '/app/Http/Controllers/admin/group/GroupController.php',
     'App\\Http\\Controllers\\admin\\period\\PeriodController' => $baseDir . '/app/Http/Controllers/admin/period/PeriodController.php',
