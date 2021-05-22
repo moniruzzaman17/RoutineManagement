@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin\subject;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Subject;
+use App\Group;
 
 class SubjectController extends Controller
 {
@@ -25,8 +26,9 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        $subjects = Subject::orderBy('entity_id', 'asc')->get();
-        return view('admin.subject.subject', compact('subjects'));
+        $subjects = Subject::with('group')->orderBy('entity_id', 'asc')->get();
+        $groups = Group::all();
+        return view('admin.subject.subject', compact('subjects','groups'));
     }
 
     /**
@@ -44,9 +46,11 @@ class SubjectController extends Controller
             'subjectCode' => 'nullable',
             'subjectName' => 'required',
             'subjectDesc' => 'nullable',
+            'group' => 'required',
         ],$Messages);
 
         $subject = new Subject;
+        $subject->group_id = request('group');
         $subject->subject_code = request('subjectCode');
         $subject->subject_name = request('subjectName');
         $subject->subject_description = request('subjectDesc');
@@ -67,6 +71,7 @@ class SubjectController extends Controller
         $subject->update([
             'subject_code' => request('subjectCode'),
             'subject_name' => request('subjectName'),
+            'group_id' => request('groupU'),
             'subject_description' => request('subjectDesc'),
         ]);
         if ($subject) {
@@ -87,16 +92,5 @@ class SubjectController extends Controller
             $subjects = Subject::orderBy('entity_id', 'asc')->get();
             return view('admin.subject.ajaxSubjectTable',compact('subjects'))->with('success','Item has been removed');
         }
-    }
-
-    /**
-     * Assign subject to Group.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function assignToGroup(Request $request)
-    {
-        $subjects = Subject::orderBy('entity_id', 'asc')->get();
-        return view('admin.subject.assign.assignSubjectToGroup', compact('subjects'));
     }
 }

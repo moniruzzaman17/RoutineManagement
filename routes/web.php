@@ -27,47 +27,46 @@ Route::group(['prefix' => 'cpscn-admin'], function () {
 		Route::get('/dashboard/key/{session_id}', 'admin\DashboardController@index')->name('admin.home');
 
 		Route::get('profile/key/{session_id}', 'admin\profile\ProfileController@index')->name('profile');
-		Route::post('profile/key/{session_id}', 'admin\profile\ProfileController@addAdmin')->name('profile');
+		Route::post('profile/key/{session_id}', 'admin\profile\ProfileController@addAdmin');
 		Route::post('profile/update/key/{session_id}', 'admin\profile\ProfileController@update')->name('profile.update');
 
 		Route::get('shift/key/{session_id}', 'admin\shift\ShiftController@index')->name('shift');
-		Route::post('shift/key/{session_id}', 'admin\shift\ShiftController@addShift')->name('shift');
+		Route::post('shift/key/{session_id}', 'admin\shift\ShiftController@addShift');
 		Route::post('shift/update/key/{session_id}', 'admin\shift\ShiftController@update')->name('shift.update');
 
 		Route::get('class/key/{session_id}', 'admin\classes\classesController@index')->name('class');
-		Route::post('class/key/{session_id}', 'admin\classes\ClassesController@addClass')->name('class');
+		Route::post('class/key/{session_id}', 'admin\classes\ClassesController@addClass');
 		Route::post('class/update/key/{session_id}', 'admin\classes\ClassesController@update')->name('class.update');
 
 
 		Route::get('group/key/{session_id}', 'admin\group\GroupController@index')->name('group');
-		Route::post('group/key/{session_id}', 'admin\group\GroupController@addGroup')->name('group');
+		Route::post('group/key/{session_id}', 'admin\group\GroupController@addGroup');
 		Route::post('group/update/key/{session_id}', 'admin\group\GroupController@update')->name('group.update');
 
 
 		Route::get('section/key/{session_id}', 'admin\section\SectionController@index')->name('section');
-		Route::post('section/key/{session_id}', 'admin\section\SectionController@addSection')->name('section');
+		Route::post('section/key/{session_id}', 'admin\section\SectionController@addSection');
 		Route::post('section/update/key/{session_id}', 'admin\section\SectionController@update')->name('section.update');
 
 		Route::get('subject/key/{session_id}', 'admin\subject\SubjectController@index')->name('subject');
-		Route::get('subject/assign/to/group/key/{session_id}', 'admin\subject\SubjectController@assignToGroup')->name('subject.assignto.group');
-		Route::post('subject/key/{session_id}', 'admin\subject\SubjectController@addSubject')->name('subject');
+		Route::post('subject/key/{session_id}', 'admin\subject\SubjectController@addSubject');
 		Route::post('subject/update/key/{session_id}', 'admin\subject\SubjectController@update')->name('subject.update');
 
 		Route::get('period/key/{session_id}', 'admin\period\PeriodController@index')->name('period');
-		Route::post('period/key/{session_id}', 'admin\period\PeriodController@addPeriod')->name('period');
+		Route::post('period/key/{session_id}', 'admin\period\PeriodController@addPeriod');
 		Route::post('period/update/key/{session_id}', 'admin\period\PeriodController@update')->name('period.update');
 
 		Route::get('room/key/{session_id}', 'admin\room\RoomController@index')->name('room');
-		Route::post('room/key/{session_id}', 'admin\room\RoomController@addRoom')->name('room');
+		Route::post('room/key/{session_id}', 'admin\room\RoomController@addRoom');
 		Route::post('room/update/key/{session_id}', 'admin\room\RoomController@update')->name('room.update');
 
 		Route::get('teacher/key/{session_id}', 'admin\teacher\TeacherController@index')->name('teacher');
-		Route::post('teacher/key/{session_id}', 'admin\teacher\TeacherController@addTeacher')->name('teacher');
+		Route::post('teacher/key/{session_id}', 'admin\teacher\TeacherController@addTeacher');
 		Route::post('teacher/update/key/{session_id}', 'admin\teacher\TeacherController@update')->name('teacher.update');
 
 		// Assign route
 		Route::get('assign/group/to/class/key/{session_id}', 'admin\assign\GroupToClassController@index')->name('assign.group.class');
-		Route::post('assign/group/to/class/key/{session_id}', 'admin\assign\GroupToClassController@assignGroupToClass')->name('assign.group.class');
+		Route::post('assign/group/to/class/key/{session_id}', 'admin\assign\GroupToClassController@assignGroupToClass');
 		Route::post('assign/group/to/class/update/key/{session_id}', 'admin\assign\GroupToClassController@update')->name('assign.group.class.update');
 	});
 });
@@ -87,4 +86,5 @@ Route::post('/teacher/remove', 'admin\teacher\TeacherController@remove')->name('
 Route::post('/admin/remove', 'admin\profile\ProfileController@remove')->name('profile.remove');
 
 Route::post('/assigngrouptoclass/remove', 'admin\assign\GroupToClassController@remove')->name('assigngrouptoclass.remove');
+
 Route::post('/dependentGroupforClass', 'admin\assign\GroupToClassController@dependentGroup')->name('assigngrouptoclass.dependent.group');

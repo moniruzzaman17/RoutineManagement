@@ -30,6 +30,14 @@
 					<form action="{{route('subject',session()->getId())}}" method="post">
 						@csrf
 						<div class="form-group">
+							<label for="group" class="">{{__('Group')}}</label><br>
+							<select name="group" class="form-select form-control" id="assignSubToGroup">
+								@foreach ($groups as $key => $group)
+								<option value="{{$group->entity_id}}">{{$group->group_name}}</option>
+								@endforeach
+							</select>
+						</div>
+						<div class="form-group">
 							<label for="subjectCode" class="">{{__('Subject Code')}}</label>
 							<input type="text" id="subjectCode" name="subjectCode" class="form-control">
 						</div>
@@ -49,6 +57,13 @@
 				<div class="col-sm-7 m-auto text-center">
 					<h5>{{__('Class List')}}</h5>
 					<div class="subject-table">
+						<select class="form-select form-control" id="subjectFilterByGroup">
+							<option style="display: none;">Filter by Group</option>
+							<option value="">None</option>
+							@foreach ($groups as $key => $group)
+							<option value="{{$group->group_name}}">{{$group->group_name}}</option>
+							@endforeach
+						</select>
 						<div class="defaultSubject">
 							@include('admin.subject.ajaxSubjectTable')
 						</div>

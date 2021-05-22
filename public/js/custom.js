@@ -46,4 +46,13 @@ $(document).ready(function() {
   // $('#startTime').pickatime({
   //   twelvehour: true,
   // });
+
+  $('#subjectFilterByGroup').change(function() { 
+    var keyword = $(this).val().toLowerCase();
+
+    $("#subjectTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(keyword) > -1)
+    });
+  });
+
 });

@@ -19,7 +19,6 @@
 						<a class="dropdown-item" href="{{route('section',session()->getId())}}">Section</a>
 						<a class="dropdown-item" href="{{route('group',session()->getId())}}">Group</a>
 						<a class="dropdown-item" href="{{route('subject',session()->getId())}}">Subject</a>
-						<a class="dropdown-item" href="{{route('subject.assignto.group',session()->getId())}}">Assign Subject to Group</a>
 						<a class="dropdown-item" href="{{route('room',session()->getId())}}">Class Room</a>
 						<a class="dropdown-item" href="{{route('period',session()->getId())}}">Period Info</a>
 						<a class="dropdown-item" href="{{route('teacher',session()->getId())}}">Teacher</a>
